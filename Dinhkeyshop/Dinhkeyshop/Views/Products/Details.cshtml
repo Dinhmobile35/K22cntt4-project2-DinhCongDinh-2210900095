@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Dinhkeyshop.Models.Products
+
+<h2>@Model.ProductName</h2>
+<div class="product-details">
+    <img src="@Model.ImageUrl" alt="@Model.ProductName" class="product-image-large" />
+    <p>Mô tả: @Model.Description</p>
+    <p>Giá: @String.Format("{0:C}", Model.Price)</p>
+    <form action="@Url.Action("AddToCart", "ShoppingCart")" method="post">
+        <input type="hidden" name="productId" value="@Model.ProductID" />
+        <input type="number" name="quantity" value="1" min="1" />
+        <input type="submit" value="Thêm vào giỏ hàng" class="btn btn-primary" />
+    </form>
+</div>
+
+<style>
+    .product-details {
+        text-align: center;
+    }
+
+    .product-image-large {
+        max-width: 35%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+</style>

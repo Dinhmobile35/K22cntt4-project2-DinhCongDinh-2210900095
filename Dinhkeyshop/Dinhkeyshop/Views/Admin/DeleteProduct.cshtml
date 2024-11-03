@@ -1,0 +1,12 @@
+﻿
+@model Dinhkeyshop.Models.Products
+
+<h2>Xóa sản phẩm</h2>
+<p>Bạn có chắc chắn muốn xóa sản phẩm này?</p>
+<p>@Model.ProductName</p>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <input type="submit" value="Xóa" class="btn btn-danger" />
+}
+<a href="@Url.Action("ManageProducts", "ManageProducts")" class="btn btn-primary">Hủy</a>

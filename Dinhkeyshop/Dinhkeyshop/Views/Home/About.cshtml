@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theo dõi đơn hàng</title>
+    <style>
+
+        /* Bạn có thể tùy chỉnh CSS để thay đổi giao diện */
+  
+
+        .container {
+            max-width: 100%; /* Sử dụng 100% để phù hợp với mọi kích thước màn hình */
+            margin: 0 auto;
+            
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Thêm khoảng cách giữa các phần tử */
+        }
+
+        input, button {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+            input:focus, button:focus {
+                outline: none;
+                box-shadow: 0 0 5px #4CAF50;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>THEO DÕI ĐƠN HÀNG</h1>
+        <p>Để theo dõi đơn hàng của bạn, vui lòng nhập 'Mã đơn hàng' hoặc 'Email' mà bạn đã sử dụng khi đặt hàng. Chúng tôi sẽ cung cấp cho bạn thông tin cập nhật về đơn hàng của bạn.</p>
+        <form>
+            <input type="text" placeholder="Mã đơn hàng">
+            <input type="email" placeholder="Email">
+            <button type="submit">THEO DÕI</button>
+        </form>
+        <p>Nếu bạn mua hàng qua sàn thương mại điện tử khác, vui lòng liên hệ với đơn vị vận chuyển để biết thông tin.</p>
+    </div>
+</body>
+</html>

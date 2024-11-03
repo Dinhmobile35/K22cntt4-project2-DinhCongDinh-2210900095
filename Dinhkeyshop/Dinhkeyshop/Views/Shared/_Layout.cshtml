@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Định Key</title>
+    <!-- Kết nối các style -->
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Css/Index.css" />
+</head>
+<body>
+    <!-- Thanh điều hướng (navbar) -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Định Key Shop", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Trang chủ", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Theo dõi đơn hàng", "About", "Home")</li>
+                    <li>@Html.ActionLink("Chính sách mua hàng", "Contact", "Home")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Session["UserID"] != null)
+                    {
+                        <!-- Nếu đã đăng nhập, hiển thị liên kết trang admin -->
+                        <li>@Html.ActionLink("Trang Quản Trị", "Dashboard", "Admin")</li>
+                        <li>@Html.ActionLink("Đăng Xuất", "Logout", "Account")</li>
+                    }
+                    else
+                    {
+                        <!-- Nếu chưa đăng nhập -->
+                        <li>@Html.ActionLink("Đăng Nhập", "Login", "Account")</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Phần nội dung chính -->
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="about-us">
+                    <h3>Về Chúng Tôi</h3>
+                    <p><strong>Định Key Shop</strong> là trang sản phẩm và dịch vụ uy tín, cung cấp các sản phẩm chất lượng.</p>
+                </div>
+                <div class="follow-us">
+                    <h3>Theo Dõi Chúng Tôi</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="~/Content/images/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="~/Content/images/social-media.png" alt="TikTok"></a>
+                        <a href="#"><img src="~/Content/images/gmail.png" alt="Email"></a>
+                        <a href="#"><img src="~/Content/images/zalo.png" alt="Zalo"></a>
+                        <a href="#"><img src="~/Content/images/youtube.png" alt="YouTube"></a>
+                        <a href="#"><img src="~/Content/images/telegram.png" alt="Telegram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Theo dõi đơn hàng | Chính sách mua hàng</p>
+                <p>2024 © Định Key Shop</p>
+                <p>Phone, Zalo: <a href="tel:0399355483">0399355483</a></p>
+            </div>
+        </footer>
+    </div>
+    <!-- Scripts -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

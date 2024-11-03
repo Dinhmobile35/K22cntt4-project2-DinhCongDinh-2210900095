@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="82504b254baa4eb4be0918e228d08901" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="DinhKeyShopModel.AdminLogs" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DinhKeyShopModel.Categories" Width="1.5" PointX="1.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DinhKeyShopModel.OrderDetails" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DinhKeyShopModel.Orders" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DinhKeyShopModel.Payments" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DinhKeyShopModel.Products" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DinhKeyShopModel.Reviews" Width="1.5" PointX="6" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DinhKeyShopModel.ShoppingCart" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DinhKeyShopModel.Users" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="DinhKeyShopModel.FK__AdminLogs__Admin__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="DinhKeyShopModel.FK__Products__Catego__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="DinhKeyShopModel.FK__OrderDeta__Order__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="DinhKeyShopModel.FK__OrderDeta__Produ__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="DinhKeyShopModel.FK__Orders__UserID__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="DinhKeyShopModel.FK__Payments__OrderI__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="DinhKeyShopModel.FK__Reviews__Product__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="DinhKeyShopModel.FK__ShoppingC__Produ__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="DinhKeyShopModel.FK__Reviews__UserID__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="DinhKeyShopModel.FK__ShoppingC__UserI__45F365D3" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

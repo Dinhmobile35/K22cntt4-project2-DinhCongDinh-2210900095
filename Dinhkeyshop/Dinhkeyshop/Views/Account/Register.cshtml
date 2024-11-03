@@ -1,0 +1,137 @@
+﻿@model Dinhkeyshop.Models.Users
+
+@{
+    ViewBag.Title = "Đăng Ký";
+}
+
+<div class="register-container">
+    <div class="register-box">
+        <h2>Tạo tài khoản mới</h2>
+
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="input-container">
+                @Html.TextBoxFor(model => model.Username, new { @class = "input-field", placeholder = "Tên đăng nhập" })
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "error-message" })
+            </div>
+
+            <div class="input-container">
+                @Html.TextBoxFor(model => model.Email, new { @class = "input-field", placeholder = "Email" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "error-message" })
+            </div>
+
+            <div class="input-container">
+                @Html.PasswordFor(model => model.PasswordHash, new { @class = "input-field", placeholder = "Mật khẩu" })
+                @Html.ValidationMessageFor(model => model.PasswordHash, "", new { @class = "error-message" })
+            </div>
+
+            <div class="input-container">
+                @Html.TextBoxFor(model => model.FullName, new { @class = "input-field", placeholder = "Họ và tên" })
+                @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "error-message" })
+            </div>
+
+            <input type="submit" value="Đăng Ký" class="btn-signup" />
+        }
+
+        <div class="separator"></div>
+
+        <p>Đã có tài khoản? <a href="@Url.Action("Login", "Account")" class="login-link">Đăng nhập</a></p>
+    </div>
+</div>
+
+<style>
+    /* Container Styles */
+    .register-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f2f5;
+    }
+
+    .register-box {
+        width: 400px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    /* Title */
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #1c1e21;
+    }
+
+    /* Input Fields */
+    .input-container {
+        margin-bottom: 15px;
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #dddfe2;
+        font-size: 16px;
+        color: #1c1e21;
+        background-color: #f5f6f7;
+    }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #1877f2;
+            background-color: #fff;
+        }
+
+    /* Error Messages */
+    .error-message {
+        color: #ff6b6b;
+        font-size: 12px;
+        text-align: left;
+        display: block;
+        margin-top: 5px;
+    }
+
+    /* Buttons */
+    .btn-signup {
+        width: 100%;
+        padding: 12px;
+        background-color: #1877f2;
+        color: #fff;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+        .btn-signup:hover {
+            background-color: #165dbf;
+        }
+
+    /* Links */
+    a {
+        color: #1877f2;
+        text-decoration: none;
+    }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    /* Separator Line */
+    .separator {
+        margin: 20px 0;
+        border-top: 1px solid #dddfe2;
+    }
+
+    /* Additional Links */
+    .login-link {
+        font-size: 14px;
+        color: #1877f2;
+    }
+</style>
