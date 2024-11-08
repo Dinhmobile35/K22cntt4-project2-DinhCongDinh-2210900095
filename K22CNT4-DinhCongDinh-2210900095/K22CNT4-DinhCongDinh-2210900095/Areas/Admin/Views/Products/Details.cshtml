@@ -1,0 +1,74 @@
+﻿@model K22CNT4_DinhCongDinh_2210900095.Models.Products
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Products</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantityInStock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantityInStock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MainImageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainImageUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categories.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categories.CategoryName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

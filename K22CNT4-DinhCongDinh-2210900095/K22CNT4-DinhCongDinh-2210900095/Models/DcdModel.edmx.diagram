@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7a58109176db4948a79f2395b29d5448" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="K22CNT4_DinhCongDinh_2210900095_dbModel.AdminLogs" Width="1.5" PointX="0.5" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="K22CNT4_DinhCongDinh_2210900095_dbModel.Categories" Width="1.5" PointX="3.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="K22CNT4_DinhCongDinh_2210900095_dbModel.OrderDetails" Width="1.5" PointX="9.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="K22CNT4_DinhCongDinh_2210900095_dbModel.Orders" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="K22CNT4_DinhCongDinh_2210900095_dbModel.Payments" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="K22CNT4_DinhCongDinh_2210900095_dbModel.ProductImages" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="K22CNT4_DinhCongDinh_2210900095_dbModel.Products" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="K22CNT4_DinhCongDinh_2210900095_dbModel.Reviews" Width="1.5" PointX="7.375" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="K22CNT4_DinhCongDinh_2210900095_dbModel.ShoppingCart" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="K22CNT4_DinhCongDinh_2210900095_dbModel.Users" Width="1.5" PointX="3.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="K22CNT4_DinhCongDinh_2210900095_dbModel.WishList" Width="1.5" PointX="9.375" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__AdminLogs__Admin__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__Products__Catego__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__OrderDeta__Order__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__OrderDeta__Produ__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__Orders__UserID__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__Payments__OrderI__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__ProductIm__Produ__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__Reviews__Product__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__ShoppingC__Produ__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__WishList__Produc__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__Reviews__UserID__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__ShoppingC__UserI__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="K22CNT4_DinhCongDinh_2210900095_dbModel.FK__WishList__UserID__656C112C" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

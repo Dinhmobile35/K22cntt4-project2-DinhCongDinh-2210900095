@@ -1,0 +1,135 @@
+﻿@model IEnumerable<K22CNT4_DinhCongDinh_2210900095.Models.Products>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+    <style>
+        /* CSS tích hợp */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: #ddd;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            margin-top:40px;
+            margin-bottom: 20px;
+        }
+
+        .table {
+            width: 100%;
+            margin: 20px 0;
+            background-color: #222;
+            color: #ddd;
+            border-collapse: collapse;
+        }
+
+            .table th, .table td {
+                padding: 15px;
+                text-align: center;
+                border: 1px solid #444;
+            }
+
+            .table th {
+                background-color: #333;
+                color: #fff;
+            }
+
+            .table td img {
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+            }
+
+        .btn {
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            padding: 5px 15px;
+            margin-right: 5px;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            padding: 5px 15px;
+        }
+
+        .btn-success, .btn-secondary {
+            padding: 10px 20px;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 15px;
+            margin-right: 5px;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+
+            .btn-primary:hover, .btn-danger:hover, .btn-success:hover, .btn-secondary:hover {
+                opacity: 0.9;
+            }
+    </style>
+</head>
+<body>
+    <h2>Quản lý sản phẩm</h2>
+
+ 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Miêu tả</th>
+                <th>Giá</th>
+                <th>Số lượng còn hàng</th>
+                <th>Loại</th>
+                <th>Hình ảnh</th>
+                <th>Được tạo tại</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>@string.Format("{0:N0} đ", item.Price)</td>
+                    <td>@Html.DisplayFor(modelItem => item.QuantityInStock)</td>
+                    <td>@(item.Categories?.CategoryName ?? "No Category")</td>
+                    <td>
+                        <img src="@item.MainImageUrl" alt="@item.ProductName" />
+                    </td>
+                    <td>@item.CreatedAt?.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                    <td>
+                        <a href="@Url.Action("Edit", new { id = item.ProductID })" class="btn btn-primary">Sửa</a>
+                        <a href="@Url.Action("Delete", new { id = item.ProductID })" class="btn btn-danger">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div>
+        <a href="@Url.Action("Create")" class="btn btn-success">Thêm mới sản phẩm</a>
+        <a href="@Url.Action("Index", "Admin")" class="btn btn-secondary">Quay lại trang Admin</a>
+    </div>
+</body>
+</html>

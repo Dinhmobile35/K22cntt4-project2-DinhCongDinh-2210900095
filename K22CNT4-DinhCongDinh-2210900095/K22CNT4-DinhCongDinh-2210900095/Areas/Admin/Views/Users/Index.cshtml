@@ -1,0 +1,137 @@
+﻿@model IEnumerable<K22CNT4_DinhCongDinh_2210900095.Models.Users>
+
+@{
+    ViewBag.Title = "Trang chính";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <style>
+        /* CSS tích hợp */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: #ddd;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .table {
+            width: 100%;
+            margin: 20px 0;
+            background-color: #222;
+            color: #ddd;
+            border-collapse: collapse;
+        }
+
+            .table th, .table td {
+                padding: 15px;
+                text-align: center;
+                border: 1px solid #444;
+            }
+
+            .table th {
+                background-color: #333;
+                color: #fff;
+            }
+
+            .table td img {
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+            }
+
+        .btn {
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            padding: 5px 15px;
+            margin-right: 5px;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            padding: 5px 15px;
+        }
+
+        .btn-success, .btn-secondary {
+            padding: 10px 20px;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 15px;
+            margin-right: 5px;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+
+            .btn-primary:hover, .btn-danger:hover, .btn-success:hover, .btn-secondary:hover {
+                opacity: 0.9;
+            }
+    </style>
+</head>
+<body>
+    <h2>Trang chính</h2>
+
+
+    <table class="table">
+        <tr>
+            <th>Tên người dùng</th>
+            <th>Thư điện tử</th>
+            <th>Mật khẩu</th>
+            <th>Họ và tên</th>
+            <th>Số điện thoại</th>
+            <th>Địa chỉ</th>
+            <th>Vai trò</th>
+            <th>Ngày tạo</th>
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Username)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.PasswordHash)</td>
+                <td>@Html.DisplayFor(modelItem => item.FullName)</td>
+                <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+                <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                <td>@Html.DisplayFor(modelItem => item.Role)</td>
+                <td>@Html.DisplayFor(modelItem => item.CreatedAt)</td>
+                <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                <td>
+                    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.UserID }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.UserID }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </table>
+    <div>
+        <a href="@Url.Action("Create")" class="btn btn-success">Thêm mới người dùng</a>
+        <a href="@Url.Action("Index", "Admin")" class="btn btn-secondary">Quay lại trang Admin</a>
+    </div>
+</body>
+</html>
