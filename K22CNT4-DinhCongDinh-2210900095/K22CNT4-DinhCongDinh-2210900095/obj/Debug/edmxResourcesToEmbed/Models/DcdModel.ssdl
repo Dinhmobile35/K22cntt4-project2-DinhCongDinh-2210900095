@@ -39,6 +39,12 @@
     <Property Name="Status" Type="nvarchar" MaxLength="20" />
     <Property Name="PaymentMethod" Type="nvarchar" MaxLength="20" />
     <Property Name="DeliveryAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="OrderCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="RecipientName" Type="nvarchar" MaxLength="100" />
+    <Property Name="RecipientEmail" Type="nvarchar" MaxLength="255" />
+    <Property Name="RecipientPhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="RecipientAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="Username" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="Payments">
     <Key>

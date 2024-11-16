@@ -46,6 +46,12 @@
     <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Order__59063A47" FromRole="Orders" ToRole="OrderDetails" />
     <NavigationProperty Name="Users" Relationship="Self.FK__Orders__UserID__5441852A" FromRole="Orders" ToRole="Users" />
     <NavigationProperty Name="Payments" Relationship="Self.FK__Payments__OrderI__5CD6CB2B" FromRole="Orders" ToRole="Payments" />
+    <Property Name="OrderCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RecipientName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RecipientEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RecipientPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RecipientAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Payments">
     <Key>

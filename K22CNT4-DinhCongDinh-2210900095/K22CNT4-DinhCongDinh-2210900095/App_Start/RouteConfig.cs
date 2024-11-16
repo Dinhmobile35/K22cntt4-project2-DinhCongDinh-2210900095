@@ -16,8 +16,11 @@ namespace K22CNT4_DinhCongDinh_2210900095
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "Dinhkeyshop.Controllers" }  // Chỉ định namespace cho phía người dùng
             );
         }
     }
+
+
 }

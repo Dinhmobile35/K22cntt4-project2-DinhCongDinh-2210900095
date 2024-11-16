@@ -1,0 +1,11 @@
+﻿@model K22CNT4_DinhCongDinh_2210900095.Models.Orders
+
+<h2>Xác nhận đơn hàng</h2>
+<p>Cảm ơn bạn đã đặt hàng!</p>
+<p>Mã đơn hàng: @Model.OrderID</p>
+<p>Ngày đặt: @Model.OrderDate</p>
+<p>Người nhận: @Model.RecipientName</p>
+<p>Email: @Model.RecipientEmail</p>
+<p>Điện thoại: @Model.RecipientPhone</p>
+<p>Địa chỉ: @Model.RecipientAddress</p>
+<p>Tổng tiền: @String.Format("{0:C}", @Model.TotalAmount)</p>

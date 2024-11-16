@@ -72,7 +72,6 @@ C:\Users\Admin\Documents\GitHub\K22cntt4-project2-DinhCongDinh-2210900095\K22CNT
 C:\Users\Admin\Documents\GitHub\K22cntt4-project2-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\bin\Newtonsoft.Json.xml
 C:\Users\Admin\Documents\GitHub\K22cntt4-project2-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\bin\Antlr3.Runtime.pdb
 C:\Users\Admin\Documents\GitHub\K22cntt4-project2-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Admin\Documents\GitHub\K22cntt4-project2-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\obj\Debug\K22CNT4-DinhCongDinh-2210900095.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\K22cntt4-project2-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\obj\Debug\K22CNT4-DinhCongDinh-2210900095.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\K22cntt4-project2-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\obj\Debug\K22CNT4-DinhCongDinh-2210900095.csproj.CopyComplete
 C:\Users\Admin\Documents\GitHub\K22cntt4-project2-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\K22CNT4-DinhCongDinh-2210900095\obj\Debug\K22CNT4-DinhCongDinh-2210900095.dll

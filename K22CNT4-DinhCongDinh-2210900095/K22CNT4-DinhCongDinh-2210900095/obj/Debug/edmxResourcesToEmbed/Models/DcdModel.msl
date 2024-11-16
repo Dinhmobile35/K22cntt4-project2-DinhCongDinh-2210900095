@@ -35,6 +35,12 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="K22CNT4_DinhCongDinh_2210900095_dbModel.Orders">
         <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="RecipientAddress" ColumnName="RecipientAddress" />
+          <ScalarProperty Name="RecipientPhone" ColumnName="RecipientPhone" />
+          <ScalarProperty Name="RecipientEmail" ColumnName="RecipientEmail" />
+          <ScalarProperty Name="RecipientName" ColumnName="RecipientName" />
+          <ScalarProperty Name="OrderCode" ColumnName="OrderCode" />
           <ScalarProperty Name="OrderID" ColumnName="OrderID" />
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />

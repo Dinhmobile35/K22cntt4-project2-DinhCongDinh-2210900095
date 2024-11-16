@@ -28,6 +28,12 @@ namespace K22CNT4_DinhCongDinh_2210900095.Models
         public string Status { get; set; }
         public string PaymentMethod { get; set; }
         public string DeliveryAddress { get; set; }
+        public string OrderCode { get; set; }
+        public string RecipientName { get; set; }
+        public string RecipientEmail { get; set; }
+        public string RecipientPhone { get; set; }
+        public string RecipientAddress { get; set; }
+        public string Username { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetails> OrderDetails { get; set; }
