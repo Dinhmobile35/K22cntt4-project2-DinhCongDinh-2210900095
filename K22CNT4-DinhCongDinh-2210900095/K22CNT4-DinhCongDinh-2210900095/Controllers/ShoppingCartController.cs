@@ -12,7 +12,7 @@ namespace K22CNT4_DinhCongDinh_2210900095.Controllers
         // Hiển thị giỏ hàng
         public ActionResult Index()
         {
-            int userId = 1; // Thay bằng cách lấy UserID thực tế (ví dụ: từ Session hoặc Identity)
+            int userId = 1;
             var cartItems = db.ShoppingCart
                 .Where(c => c.UserID == userId)
                 .ToList();
@@ -23,7 +23,7 @@ namespace K22CNT4_DinhCongDinh_2210900095.Controllers
         // Thêm sản phẩm vào giỏ hàng
         public ActionResult AddToCart(int productId, int quantity)
         {
-            int userId = 1; // Thay bằng cách lấy UserID thực tế
+            int userId = 1; 
 
             // Kiểm tra sản phẩm đã tồn tại trong giỏ hàng chưa
             var existingCartItem = db.ShoppingCart.FirstOrDefault(c => c.UserID == userId && c.ProductID == productId);
@@ -67,7 +67,7 @@ namespace K22CNT4_DinhCongDinh_2210900095.Controllers
         // Chuyển sang trang thanh toán
         public ActionResult Checkout()
         {
-            int userId = 1; // Thay bằng cách lấy UserID thực tế
+            int userId = 1; 
             var cartItems = db.ShoppingCart
                 .Where(c => c.UserID == userId)
                 .ToList();

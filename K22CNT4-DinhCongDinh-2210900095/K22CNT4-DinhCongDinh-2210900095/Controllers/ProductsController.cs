@@ -6,7 +6,7 @@ namespace Dinhkeyshop.Controllers
 {
     public class ProductsController : Controller
     {
-        private readonly K22CNT4_DinhCongDinh_2210900095_dbEntities _context; // Thay thế YourDbContext bằng tên ngữ cảnh của bạn
+        private readonly K22CNT4_DinhCongDinh_2210900095_dbEntities _context; 
 
         public ProductsController()
         {

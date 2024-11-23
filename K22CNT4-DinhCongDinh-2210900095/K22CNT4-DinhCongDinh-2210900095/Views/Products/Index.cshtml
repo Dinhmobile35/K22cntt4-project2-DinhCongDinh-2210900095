@@ -18,7 +18,7 @@
                         <img src="@product.MainImageUrl" alt="@product.ProductName" />
                         <h2>@product.ProductName</h2>
                         <p>@product.Description</p>
-                        <p>Giá: @String.Format("{0:C}", product.Price)</p>
+                        <p>Giá: @String.Format("{0:N0}đ", product.Price)</p>
                         <p>Còn lại: @product.QuantityInStock</p>
                         <a href="@Url.Action("Details", "Products", new { id = product.ProductID })" class="btn btn-primary">Xem chi tiết</a>
                     </div>

@@ -7,7 +7,7 @@
 <div class="product-details">
     <img src="@Model.MainImageUrl" alt="@Model.ProductName" class="product-image-large" />
     <p>Mô tả: @Model.Description</p>
-    <p>Giá: @String.Format("{0:C}", Model.Price)</p>
+    <p>Giá: @String.Format("{0:N0}đ", Model.Price)</p>
     <form action="@Url.Action("AddToCart", "ShoppingCart")" method="post">
         <input type="hidden" name="productId" value="@Model.ProductID" />
         <input type="number" name="quantity" value="1" min="1" />

@@ -197,6 +197,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\facebook.png" />
+    <Content Include="Content\images\gmail.png" />
+    <Content Include="Content\images\LOGO DKEY.png" />
+    <Content Include="Content\images\social-media.png" />
+    <Content Include="Content\images\telegram.png" />
+    <Content Include="Content\images\youtube.png" />
+    <Content Include="Content\images\zalo.png" />
     <Content Include="Css\Index.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -241,6 +248,7 @@
     <Content Include="Areas\Admin\Views\Categories\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Orders\Details.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

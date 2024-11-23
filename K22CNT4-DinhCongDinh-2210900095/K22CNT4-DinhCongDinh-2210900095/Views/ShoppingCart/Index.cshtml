@@ -21,8 +21,8 @@
                     <img src="@item.Products.MainImageUrl" alt="@item.Products.ProductName" style="width: 100px;" />
                 </td>
                 <td>@item.Quantity</td>
-                <td>@String.Format("{0:C}", item.Products.Price)</td>
-                <td>@String.Format("{0:C}", item.Quantity * item.Products.Price)</td>
+                <td>@String.Format("{0:N0}đ", item.Products.Price)</td>
+                <td>@String.Format("{0:N0}đ", item.Quantity * item.Products.Price)</td>
                 <td>
                     <a href="@Url.Action("RemoveFromCart", "ShoppingCart", new { cartId = item.CartID })" class="btn btn-danger">Xóa</a>
                 </td>

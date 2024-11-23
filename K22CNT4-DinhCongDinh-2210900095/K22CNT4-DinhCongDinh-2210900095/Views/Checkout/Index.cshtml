@@ -47,13 +47,13 @@
                             <td>
                                 <img src="@item.Products.MainImageUrl" alt="@item.Products.ProductName" style="width: 100px;" />
                             </td>
-                            <td>@String.Format("{0:C2}", item.Products.Price)</td>
-                            <td>@String.Format("{0:C}", item.Quantity * item.Products.Price)</td>
+                            <td>@String.Format("{0:N0}đ", item.Products.Price)</td>
+                            <td>@String.Format("{0:N0}đ", item.Quantity * item.Products.Price)</td>
                         </tr>
                     }
                 </tbody>
             </table>
-            <h4>Tổng tiền: @String.Format("{0:C}", ViewBag.TotalAmount)</h4>
+            <h4>Tổng tiền: @String.Format("{0:N0}đ", ViewBag.TotalAmount)</h4>
         </div>
     </div>
     <button type="submit" class="btn btn-success">Đặt hàng</button>

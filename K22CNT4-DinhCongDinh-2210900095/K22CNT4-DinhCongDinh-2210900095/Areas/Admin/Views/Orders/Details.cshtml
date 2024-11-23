@@ -1,0 +1,14 @@
+﻿@model K22CNT4_DinhCongDinh_2210900095.Models.Orders
+
+<h2>Chi Tiết Đơn Hàng</h2>
+
+<div>
+    <p><strong>Mã Đơn Hàng:</strong> @Model.OrderID</p>
+    <p><strong>Ngày Đặt:</strong> @(Model.OrderDate.HasValue ? Model.OrderDate.Value.ToString("dd/MM/yyyy") : "N/A")</p>
+    <p><strong>Tổng Số Tiền:</strong> @String.Format("{0:C}", Model.TotalAmount)</p>
+    <p><strong>Trạng Thái:</strong> @Model.Status</p>
+</div>
+
+<div>
+    <a href="@Url.Action("Index", "Orders")" class="btn btn-secondary">Quay lại danh sách đơn hàng</a>
+</div>

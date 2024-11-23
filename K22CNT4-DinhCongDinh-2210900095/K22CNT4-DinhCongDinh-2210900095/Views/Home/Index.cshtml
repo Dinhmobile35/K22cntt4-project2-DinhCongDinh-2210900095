@@ -89,7 +89,7 @@
                         <div class="product-card">
                             <img src="@product.MainImageUrl" alt="@product.ProductName" class="product-image" />
                             <h3>@product.ProductName</h3>
-                            <p>@String.Format("{0:C}", product.Price)</p>
+                            <p>@String.Format("{0:N0}đ", product.Price)</p>
                             <a href="@Url.Action("Details", "Products", new { id = product.ProductID })" class="btn btn-primary">Xem chi tiết</a>
 
                         </div>

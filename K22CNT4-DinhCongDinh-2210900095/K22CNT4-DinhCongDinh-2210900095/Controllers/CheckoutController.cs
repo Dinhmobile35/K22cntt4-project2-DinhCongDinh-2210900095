@@ -12,7 +12,7 @@ namespace K22CNT4_DinhCongDinh_2210900095.Controllers
         // Hiển thị trang thanh toán
         public ActionResult Index()
         {
-            int userId = 1; // Thay bằng UserID thực tế (ví dụ: lấy từ Session)
+            int userId = 1; 
             var cartItems = db.ShoppingCart
                 .Where(c => c.UserID == userId)
                 .ToList();
@@ -32,7 +32,7 @@ namespace K22CNT4_DinhCongDinh_2210900095.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult ProcessOrder(string recipientName, string recipientEmail, string recipientPhone, string recipientAddress)
         {
-            int userId = 1; // Thay bằng UserID thực tế (ví dụ: lấy từ Session)
+            int userId = 1;
 
             var cartItems = db.ShoppingCart.Where(c => c.UserID == userId).ToList();
             if (!cartItems.Any())
